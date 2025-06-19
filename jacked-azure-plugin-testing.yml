@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Jacked@1
+  inputs:
+    token: 'cn_VLNgDRcCTMbRMeW84J7en2Y2'
+    scanType: 'image'
+    scanName: 'ubuntu'
+    failCriteria: 'medium'
+    skipBuildFail: 'false'
